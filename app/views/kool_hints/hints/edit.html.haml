@@ -1,0 +1,12 @@
+.row-fluid
+  .span7
+    %h1= "Hint '#{@hint.name.humanize}' Details"
+    = simple_form_for([:kool_hints, @hint], :html => { :class => 'form-horizontal panel' }) do |f|
+      = hidden_field_tag 'return_to', return_to_path
+      = f.input :content, :input_html => { :class => 'input-xlarge', :rows => 15 }
+      .form-actions
+        = f.button :submit, :class => 'btn-primary'
+        = link_to 'Cancel', return_to_path, :class => 'btn'
+
+  .span5
+    = hint :markdown
