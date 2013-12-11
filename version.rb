@@ -1,1 +1,3 @@
-VERSION = '0.0.1'
+module KoolHints
+  VERSION = '0.0.1'
+end
