@@ -1,6 +1,4 @@
-class Hint < ActiveRecord::Base
-  attr_accessible :content
-
+class KoolHint < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
   validates :content, :presence => true
 end
