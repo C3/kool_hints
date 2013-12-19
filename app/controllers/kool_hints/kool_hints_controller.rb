@@ -6,7 +6,7 @@ module KoolHints
     end
 
     def update
-      if @koolhint.update_attributes(params[:hint])
+      if @koolhint.update!(kool_hint_params)
         flash[:notice] = "Hint updated"
         redirect_to return_to_path
       else
@@ -18,6 +18,10 @@ module KoolHints
 
     def load_kool_hint
       @koolhint = KoolHint.find(params[:id])
+    end
+
+    def kool_hint_params
+      params.permit(:id, :name, :content)
     end
   end
 end
