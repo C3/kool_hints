@@ -1,5 +1,5 @@
 module KoolHints
-  class HintsController < ApplicationController
+  class KoolHintsController < ApplicationController
     load_and_authorize_resource
 
     def edit
