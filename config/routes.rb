@@ -1,5 +1,3 @@
 Rails.application.routes.draw do
-  namespace :kool_hints do
-    resources :hints, :only => [:edit, :update]
-  end
+  resources :kool_hints, :only => [:edit, :update]
 end
